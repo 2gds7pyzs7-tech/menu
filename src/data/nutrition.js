@@ -19,7 +19,7 @@ export function alignRecipe(recipe,targetDailyKcal){
  const scale=targetDailyKcal*recipe.batch/raw;
  const ingredients=recipe.ingredients.map(i=>({...i,amount:number(i.amount*scale,i.unit)}));
  const total=nutrients(ingredients);
- return {...recipe,ingredients,polina:serving(total,.45,recipe.batch,recipe.polina.weight),nikita:serving(total,.55,recipe.batch,recipe.nikita.weight)};
+ return {...recipe,ingredients,polina:serving(total,.47,recipe.batch,recipe.polina.weight),nikita:serving(total,.53,recipe.batch,recipe.nikita.weight)};
 }
 
 export function unknownNutritionIngredients(ingredients){return ingredients.filter(i=>!values[i.name]&&!zero.includes(i.name)).map(i=>i.name);}
