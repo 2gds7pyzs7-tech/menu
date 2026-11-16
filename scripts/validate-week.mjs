@@ -6,7 +6,9 @@ if(days.length!==7)errors.push('Неделя должна содержать р�
 if(!week.id||!week.label||!week.calendarFile||!week.storageKey)errors.push('Заполните id, label, calendarFile и storageKey недели.');
 for(const day of days){
   if(!/^\d{4}-\d{2}-\d{2}$/.test(day.date))errors.push(`Некорректная дата: ${day.date}`);
-  if(!Array.isArray(day.meals)||day.meals.length!==2)errors.push(`${day.date}: нужны обед и ужин.`);
+  if(!Array.isArray(day.meals)||day.meals.length!==4)errors.push(`${day.date}: нужны завтрак, обед, перекус и ужин.`);
+  const required=['Завтрак','Обед','Перекус','Ужин'];
+  if((day.meals||[]).map(meal=>meal.type).join('|')!==required.join('|'))errors.push(`${day.date}: приёмы пищи должны идти в порядке «завтрак → обед → перекус → ужин».`);
   for(const meal of day.meals||[])if(!recipes[meal.recipe])errors.push(`${day.date}: рецепт «${meal.recipe}» не найден.`);
 }
 for(const session of sessions)if(!days.some(day=>day.date===session.date))errors.push(`Готовка «${session.id}» ссылается на день вне недели.`);

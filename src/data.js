@@ -1,8 +1,9 @@
 import {C,recipes as baseRecipes} from './data/recipes.js';
 import {currentWeekRecipes} from './data/recipes-2026-11-16.js';
+import {everydayRecipes} from './data/recipes-everyday.js';
 import {days} from './data/weeks/current.js';
 
-export const recipes={...baseRecipes,...currentWeekRecipes};
+export const recipes={...baseRecipes,...currentWeekRecipes,...everydayRecipes};
 export {week,days,sessions} from './data/weeks/current.js';
 
 export function totals(day,person){

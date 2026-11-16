@@ -1,4 +1,4 @@
-const meal=(recipe,batch,mode='готовить',note='')=>({recipe,batch,mode,note});
+const meal=(type,recipe,batch,mode='готовить',note='')=>({type,recipe,batch,mode,note});
 
 export const week={
  id:'2026-11-16',label:'16–22 ноября 2026',calendarFile:'calendar/menu-16-22-nov-2026.ics',storageKey:'menu-2026-11-16-checked',
@@ -8,13 +8,13 @@ export const week={
 };
 
 export const days=[
- {date:'2026-11-16',weekday:'Понедельник',short:'Пн',meals:[meal('chicken-cheese-cutlets','prev-sun-cutlets','разогреть','Котлеты и дольки — остаток воскресной готовки; салат нарезать свежим.'),meal('chicken-quesadilla','m16-quesadilla')]},
- {date:'2026-11-17',weekday:'Вторник',short:'Вт',meals:[meal('chicken-meatballs-spaghetti','t17-meatballs'),meal('mushroom-cream-pasta','t17-pasta')]},
- {date:'2026-11-18',weekday:'Среда',short:'Ср',meals:[meal('chicken-meatballs-spaghetti','t17-meatballs','разогреть','Митболы, соус и спагетти со вторника; прогреть отдельно.'),meal('mushroom-cream-pasta','t17-pasta','разогреть','Паста и соус со вторника; сыр добавить после разогрева.')]},
- {date:'2026-11-19',weekday:'Четверг',short:'Чт',meals:[meal('chicken-tomato-rice','th19-chicken-rice'),meal('salmon-honey-mustard','th19-salmon')]},
- {date:'2026-11-20',weekday:'Пятница',short:'Пт',meals:[meal('chicken-tomato-rice','th19-chicken-rice','разогреть','Курица в томатном соусе и рис приготовлены в четверг.'),meal('aubergine-traybake','f20-aubergine')]},
- {date:'2026-11-21',weekday:'Суббота',short:'Сб',meals:[meal('chicken-schnitzel-mash','s21-schnitzel'),meal('aubergine-traybake','f20-aubergine','разогреть','Баклажанный traybake приготовлен в пятницу; базилик добавить свежим.')]},
- {date:'2026-11-22',weekday:'Воскресенье',short:'Вс',meals:[meal('chicken-cheese-cutlets','su22-cutlets'),meal('lazy-achma','su22-achma')]}
+ {date:'2026-11-16',weekday:'Понедельник',short:'Пн',meals:[meal('Завтрак','egg-avocado-toast','m16-breakfast'),meal('Обед','chicken-cheese-cutlets','prev-sun-cutlets','разогреть','Котлеты и дольки — остаток воскресной готовки; салат нарезать свежим.'),meal('Перекус','yogurt-fruit-nuts','m16-snack'),meal('Ужин','chicken-quesadilla','m16-quesadilla')]},
+ {date:'2026-11-17',weekday:'Вторник',short:'Вт',meals:[meal('Завтрак','cottage-cheese-pancakes','t17-breakfast'),meal('Обед','chicken-meatballs-spaghetti','t17-meatballs'),meal('Перекус','banana-toast-preworkout','t17-snack','готовить','За 60–90 минут до бокса.'),meal('Ужин','mushroom-cream-pasta','t17-pasta')]},
+ {date:'2026-11-18',weekday:'Среда',short:'Ср',meals:[meal('Завтрак','egg-avocado-toast','w18-breakfast'),meal('Обед','chicken-meatballs-spaghetti','t17-meatballs','разогреть','Митболы, соус и спагетти со вторника; прогреть отдельно.'),meal('Перекус','yogurt-fruit-nuts','w18-snack'),meal('Ужин','mushroom-cream-pasta','t17-pasta','разогреть','Паста и соус со вторника; сыр добавить после разогрева.')]},
+ {date:'2026-11-19',weekday:'Четверг',short:'Чт',meals:[meal('Завтрак','cottage-cheese-pancakes','th19-breakfast'),meal('Обед','chicken-tomato-rice','th19-chicken-rice'),meal('Перекус','banana-toast-preworkout','th19-snack','готовить','За 60–90 минут до бокса.'),meal('Ужин','salmon-honey-mustard','th19-salmon')]},
+ {date:'2026-11-20',weekday:'Пятница',short:'Пт',meals:[meal('Завтрак','oat-yogurt-bowl','f20-breakfast'),meal('Обед','chicken-tomato-rice','th19-chicken-rice','разогреть','Курица в томатном соусе и рис приготовлены в четверг.'),meal('Перекус','chocolate-cottage-cream','f20-snack'),meal('Ужин','aubergine-traybake','f20-aubergine')]},
+ {date:'2026-11-21',weekday:'Суббота',short:'Сб',meals:[meal('Завтрак','oat-yogurt-bowl','s21-breakfast'),meal('Обед','chicken-schnitzel-mash','s21-schnitzel'),meal('Перекус','yogurt-fruit-nuts','s21-snack'),meal('Ужин','aubergine-traybake','f20-aubergine','разогреть','Баклажанный traybake приготовлен в пятницу; базилик добавить свежим.')]},
+ {date:'2026-11-22',weekday:'Воскресенье',short:'Вс',meals:[meal('Завтрак','egg-avocado-toast','su22-breakfast'),meal('Обед','chicken-cheese-cutlets','su22-cutlets'),meal('Перекус','yogurt-fruit-nuts','su22-snack'),meal('Ужин','lazy-achma','su22-achma')]}
 ];
 
 export const sessions=[
