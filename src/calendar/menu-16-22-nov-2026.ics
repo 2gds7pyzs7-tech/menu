@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//ÐÐ¼ÐµÑÑÐµ//Ð¡ÐµÐ¼ÐµÐ¹Ð½Ð¾Ðµ Ð¼ÐµÐ½Ñ//RU
+PRODID:-//Вместе//Семейное меню//RU
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
@@ -8,23 +8,23 @@ UID:menu-20261117-prep@vmeste.local
 DTSTAMP:20261116T070000Z
 DTSTART;TZID=Europe/Moscow:20261117T180000
 DTEND;TZID=Europe/Moscow:20261117T193000
-SUMMARY:ÐÐ¾ÑÐ¾Ð²ÐºÐ° Â· Ð²ÑÐ¾ÑÐ½Ð¸ÐºâÑÑÐµÐ´Ð°
-DESCRIPTION:ÐÐ¸ÑÐ±Ð¾Ð»Ñ ÑÐ¾ ÑÐ¿Ð°Ð³ÐµÑÑÐ¸ Ð¸ Ð³ÑÐ¸Ð±Ð½Ð°Ñ Ð¿Ð°ÑÑÐ°. Ð Ð°Ð·Ð»Ð¾Ð¶Ð¸ÑÑ ÑÑÐµÐ´Ñ Ð¾ÑÐ´ÐµÐ»ÑÐ½Ð¾.
+SUMMARY:Готовка · вторник–среда
+DESCRIPTION:Митболы со спагетти и грибная паста. Разложить среду отдельно.
 END:VEVENT
 BEGIN:VEVENT
 UID:menu-20261119-prep@vmeste.local
 DTSTAMP:20261116T070000Z
 DTSTART;TZID=Europe/Moscow:20261119T180000
 DTEND;TZID=Europe/Moscow:20261119T194000
-SUMMARY:ÐÐ¾ÑÐ¾Ð²ÐºÐ° Â· ÑÐµÑÐ²ÐµÑÐ³âÑÑÐ±Ð±Ð¾ÑÐ°
-DESCRIPTION:ÐÑÑÐ¸ÑÐ° Ñ ÑÐ¸ÑÐ¾Ð¼; ÑÑÐ±Ð° ÑÐ²ÐµÐ¶Ð°Ñ. Ð Ð¿ÑÑÐ½Ð¸ÑÑ traybake, Ð² ÑÑÐ±Ð±Ð¾ÑÑ ÑÐ½Ð¸ÑÐµÐ»Ñ.
+SUMMARY:Готовка · четверг–суббота
+DESCRIPTION:Курица с рисом; рыба свежая. В пятницу traybake, в субботу шницель.
 END:VEVENT
 BEGIN:VEVENT
 UID:menu-20261122-prep@vmeste.local
 DTSTAMP:20261116T070000Z
 DTSTART;TZID=Europe/Moscow:20261122T170000
 DTEND;TZID=Europe/Moscow:20261122T183000
-SUMMARY:ÐÐ¾ÑÐ¾Ð²ÐºÐ° Â· Ð²Ð¾ÑÐºÑÐµÑÐµÐ½ÑÐµâÐ¿Ð¾Ð½ÐµÐ´ÐµÐ»ÑÐ½Ð¸Ðº
-DESCRIPTION:ÐÐ¾ÑÐ»ÐµÑÑ Ñ Ð´Ð¾Ð»ÑÐºÐ°Ð¼Ð¸ Ð¸ Ð»ÐµÐ½Ð¸Ð²Ð°Ñ Ð°ÑÐ¼Ð°; Ð¾ÑÑÐ°ÑÐºÐ¸ Ð´Ð»Ñ Ð¿Ð¾Ð½ÐµÐ´ÐµÐ»ÑÐ½Ð¸ÐºÐ°.
+SUMMARY:Готовка · воскресенье–понедельник
+DESCRIPTION:Котлеты с дольками и ленивая ачма; остатки для понедельника.
 END:VEVENT
 END:VCALENDAR
