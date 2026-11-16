@@ -1,7 +1,8 @@
-import {C,recipes} from './data/recipes.js';
+import {C,recipes as baseRecipes} from './data/recipes.js';
+import {currentWeekRecipes} from './data/recipes-2026-11-16.js';
 import {days} from './data/weeks/current.js';
 
-export {recipes};
+export const recipes={...baseRecipes,...currentWeekRecipes};
 export {week,days,sessions} from './data/weeks/current.js';
 
 export function totals(day,person){
@@ -16,6 +17,9 @@ export function shoppingFor(scope){
   const items=new Map();
   for(const batch of batches){
     const firstDay=days.find(day=>day.meals.some(meal=>meal.batch===batch.id));
+    const firstMeal=firstDay.meals.find(meal=>meal.batch===batch.id);
+    // ÐÐ°ÑÑÐ¸Ñ, ÐºÐ¾ÑÐ¾ÑÐ°Ñ Ð¿ÑÐ¸ÑÐ»Ð° Ð¾ÑÑÐ°ÑÐºÐ¾Ð¼ Ð¸Ð· Ð¿ÑÐµÐ´ÑÐ´ÑÑÐµÐ¹ Ð½ÐµÐ´ÐµÐ»Ð¸, ÑÐ¶Ðµ Ð±ÑÐ»Ð° ÐºÑÐ¿Ð»ÐµÐ½Ð° ÑÐ¾Ð³Ð´Ð°.
+    if(firstMeal.mode==='ÑÐ°Ð·Ð¾Ð³ÑÐµÑÑ')continue;
     if(scope!=='all'&&scope!==firstDay.date)continue;
     for(const ingredient of recipes[batch.recipe].ingredients){
       if(ingredient.category===C.w)continue;
@@ -24,5 +28,5 @@ export function shoppingFor(scope){
       if(old)old.amount+=ingredient.amount;else items.set(key,{...ingredient});
     }
   }
-  return [...items.values()].map(item=>({...item,amount:item.unit==='шт.'?Math.ceil(item.amount):Math.round(item.amount)})).sort((a,b)=>a.category.localeCompare(b.category,'ru')||a.name.localeCompare(b.name,'ru'));
+  return [...items.values()].map(item=>({...item,amount:item.unit==='ÑÑ.'?Math.ceil(item.amount):Math.round(item.amount)})).sort((a,b)=>a.category.localeCompare(b.category,'ru')||a.name.localeCompare(b.name,'ru'));
 }
