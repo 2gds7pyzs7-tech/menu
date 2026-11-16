@@ -1,6 +1,17 @@
 const I=(name,amount,unit='г',category='Овощи и фрукты',note='')=>({name,amount,unit,category,note});
 const S=(title,text,result)=>({title,text,result});
-const R=(id,name,type,batch,image,polina,nikita,ingredients,steps,storage,reheat,source)=>({id,name,type,batch,image,polina,nikita,ingredients,steps,storage,reheat,source});
+const WEEK_IMAGES={
+ 'chicken-cheese-cutlets':'images/chicken-cheese-cutlets.png',
+ 'chicken-quesadilla':'images/chicken-quesadilla.png',
+ 'chicken-meatballs-spaghetti':'images/chicken-meatballs-spaghetti.png',
+ 'mushroom-cream-pasta':'images/mushroom-cream-pasta.png',
+ 'chicken-tomato-rice':'images/chicken-tomato-rice.png',
+ 'salmon-honey-mustard':'images/salmon-honey-mustard.png',
+ 'aubergine-traybake':'images/aubergine-traybake.png',
+ 'chicken-schnitzel-mash':'images/chicken-schnitzel-mash.png',
+ 'lazy-achma':'images/lazy-achma.png'
+};
+const R=(id,name,type,batch,image,polina,nikita,ingredients,steps,storage,reheat,source)=>({id,name,type,batch,image:WEEK_IMAGES[id]||image,polina,nikita,ingredients,steps,storage,reheat,source});
 
 // Рецепты этой недели адаптированы по указанным первоисточникам: количества и порции пересчитаны для семьи.
 export const currentWeekRecipes={
