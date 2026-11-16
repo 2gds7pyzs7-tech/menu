@@ -15,7 +15,8 @@ const dateText=date=>new Date(date+'T12:00:00+03:00').toLocaleDateString('ru-RU'
 const timeFor=type=>({Завтрак:'08:00',Обед:'13:00',Перекус:'16:30',Ужин:'20:00'})[type]||'12:00';
 const mealIcon=type=>({Завтрак:'☀',Обед:'◐',Перекус:'✦',Ужин:'◒'})[type]||'•';
 const themeButton=()=>'<button class="themeToggle" data-theme-toggle aria-label="Сменить тему" title="Сменить тему">'+(document.documentElement.dataset.theme==='dark'?'☀':'◐')+'</button>';
-const navigation=()=>'<nav class="bottom" aria-label="Разделы"><button data-view="menu" class="'+(state.view==='menu'?'active':'')+'"><span>⌂</span><strong>План</strong></button><button data-view="prep" class="'+(state.view==='prep'?'active':'')+'"><span>◷</span><strong>Готовка</strong></button><button data-view="shopping" class="'+(state.view==='shopping'?'active':'')+'"><span>□</span><strong>Список</strong></button></nav>';
+const navIcon=(name)=>({menu:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10Z"/><path d="M9 21v-6h6v6"/></svg>',prep:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>',shopping:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10l1 16H6L7 4Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>'})[name];
+const navigation=()=>'<nav class="bottom" aria-label="Разделы"><button data-view="menu" class="'+(state.view==='menu'?'active':'')+'"><span>'+navIcon('menu')+'</span><strong>План</strong></button><button data-view="prep" class="'+(state.view==='prep'?'active':'')+'"><span>'+navIcon('prep')+'</span><strong>Готовка</strong></button><button data-view="shopping" class="'+(state.view==='shopping'?'active':'')+'"><span>'+navIcon('shopping')+'</span><strong>Список</strong></button></nav>';
 
 function menu(){
  const d=days[state.day];
