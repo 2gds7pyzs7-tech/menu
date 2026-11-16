@@ -1,5 +1,6 @@
 import {days,sessions,week} from '../src/data/weeks/current.js';
 import {recipes} from '../src/data.js';
+import {unknownNutritionIngredients} from '../src/data/nutrition.js';
 
 const errors=[];
 if(days.length!==7)errors.push('Неделя должна содержать ровно 7 дней.');
@@ -9,7 +10,12 @@ for(const day of days){
   if(!Array.isArray(day.meals)||day.meals.length!==4)errors.push(`${day.date}: нужны завтрак, обед, перекус и ужин.`);
   const required=['Завтрак','Обед','Перекус','Ужин'];
   if((day.meals||[]).map(meal=>meal.type).join('|')!==required.join('|'))errors.push(`${day.date}: приёмы пищи должны идти в порядке «завтрак → обед → перекус → ужин».`);
-  for(const meal of day.meals||[])if(!recipes[meal.recipe])errors.push(`${day.date}: рецепт «${meal.recipe}» не найден.`);
+  for(const meal of day.meals||[]){
+    const recipe=recipes[meal.recipe];
+    if(!recipe){errors.push(`${day.date}: рецепт «${meal.recipe}» не найден.`);continue}
+    const unknown=unknownNutritionIngredients(recipe.ingredients);
+    if(unknown.length)errors.push(`${day.date}: нет пищевых значений для «${unknown.join('», «')}».`);
+  }
 }
 for(const session of sessions)if(!days.some(day=>day.date===session.date))errors.push(`Готовка «${session.id}» ссылается на день вне недели.`);
 if(errors.length){console.error(errors.join('\n'));process.exitCode=1}else console.log(`Проверка пройдена: ${week.label}.`);

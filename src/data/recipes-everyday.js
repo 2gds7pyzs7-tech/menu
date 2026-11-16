@@ -1,6 +1,7 @@
+import {alignRecipe} from './nutrition.js';
 const I=(name,amount,unit='г',category='Овощи и фрукты',note='')=>({name,amount,unit,category,note});
 const S=(title,text,result)=>({title,text,result});
-const R=(id,name,type,image,polina,nikita,ingredients,steps,storage,reheat)=>({id,name,type,batch:1,image,polina,nikita,ingredients,steps,storage,reheat,source:'Семейный ПП-рецепт: продукты взвешиваются до приготовления.'});
+const R=(id,name,type,image,polina,nikita,ingredients,steps,storage,reheat)=>alignRecipe({id,name,type,batch:1,image,polina,nikita,ingredients,steps,storage,reheat,source:'Семейный ПП-рецепт: продукты взвешиваются до приготовления.'},polina.kcal+nikita.kcal);
 
 // Быстрые завтраки и перекусы: цельные продукты, достаточный белок и понятные порции.
 export const everydayRecipes={

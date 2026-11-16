@@ -1,3 +1,4 @@
+import {alignRecipe} from './nutrition.js';
 const I=(name,amount,unit='г',category='Овощи и фрукты',note='')=>({name,amount,unit,category,note});
 const S=(title,text,result)=>({title,text,result});
 const WEEK_IMAGES={
@@ -11,7 +12,7 @@ const WEEK_IMAGES={
  'chicken-schnitzel-mash':'images/chicken-schnitzel-mash.png',
  'lazy-achma':'images/lazy-achma.png'
 };
-const R=(id,name,type,batch,image,polina,nikita,ingredients,steps,storage,reheat,source)=>({id,name,type,batch,image:WEEK_IMAGES[id]||image,polina,nikita,ingredients,steps,storage,reheat,source});
+const R=(id,name,type,batch,image,polina,nikita,ingredients,steps,storage,reheat,source)=>alignRecipe({id,name,type,batch,image:WEEK_IMAGES[id]||image,polina,nikita,ingredients,steps,storage,reheat,source},polina.kcal+nikita.kcal);
 
 // Рецепты этой недели адаптированы по указанным первоисточникам: количества и порции пересчитаны для семьи.
 export const currentWeekRecipes={
