@@ -1,0 +1,7 @@
+{
+  "name":"family-menu",
+  "private":true,
+  "type":"module",
+  "scripts":{"check":"node scripts/validate-week.mjs","build":"node scripts/build.mjs","preview":"npx serve dist"},
+  "devDependencies":{"wrangler":"^4.0.0"}
+}

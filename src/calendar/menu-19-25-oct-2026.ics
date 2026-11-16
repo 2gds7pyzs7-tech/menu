@@ -1,0 +1,95 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Vmeste//Family Menu 2026//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Готовки 19–25 октября 2026
+BEGIN:VTIMEZONE
+TZID:Europe/Moscow
+X-LIC-LOCATION:Europe/Moscow
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+TZNAME:MSK
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:menu-20261019-bigcook@vmeste.local
+DTSTAMP:20261019T120000Z
+DTSTART;TZID=Europe/Moscow:20261019T163000
+DTEND;TZID=Europe/Moscow:20261019T180000
+SUMMARY:Готовка 1 — котлеты и ризотто
+DESCRIPTION:Приготовить на понедельник и вторник. Рис быстро охладить.
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT1H
+DESCRIPTION:Подготовить продукты для большой готовки
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:menu-20261021-bigcook@vmeste.local
+DTSTAMP:20261019T120000Z
+DTSTART;TZID=Europe/Moscow:20261021T170000
+DTEND;TZID=Europe/Moscow:20261021T182000
+SUMMARY:Готовка 2 — паприкаш и томатный суп
+DESCRIPTION:Паприкаш на два обеда. Сэндвичи подрумянить к ужину.
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT1H
+DESCRIPTION:Подготовить продукты для большой готовки
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:menu-20261022-fish@vmeste.local
+DTSTAMP:20261019T120000Z
+DTSTART;TZID=Europe/Moscow:20261022T190000
+DTEND;TZID=Europe/Moscow:20261022T194500
+SUMMARY:Свежий ужин — рыба и картофель
+DESCRIPTION:Разогреть духовку и начать с картофеля.
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT30M
+DESCRIPTION:Подготовить рыбу и картофель
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:menu-20261023-bigcook@vmeste.local
+DTSTAMP:20261019T120000Z
+DTSTART;TZID=Europe/Moscow:20261023T170000
+DTEND;TZID=Europe/Moscow:20261023T183000
+SUMMARY:Готовка 3 — терияки и пармиджана
+DESCRIPTION:Приготовить на пятницу и субботу. Салат субботы сделать свежим.
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT1H
+DESCRIPTION:Подготовить продукты для большой готовки
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:menu-20261025-lunch@vmeste.local
+DTSTAMP:20261019T120000Z
+DTSTART;TZID=Europe/Moscow:20261025T120000
+DTEND;TZID=Europe/Moscow:20261025T124000
+SUMMARY:Свежий обед — паста с фетой
+DESCRIPTION:Сначала поставить томаты и фету в духовку.
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT20M
+DESCRIPTION:Подготовить продукты для обеда
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:menu-20261025-dinner@vmeste.local
+DTSTAMP:20261019T120000Z
+DTSTART;TZID=Europe/Moscow:20261025T184000
+DTEND;TZID=Europe/Moscow:20261025T193000
+SUMMARY:Свежий ужин — куриные шашлычки
+DESCRIPTION:Замариновать курицу и разогреть духовку.
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT30M
+DESCRIPTION:Начать мариновать курицу
+END:VALARM
+END:VEVENT
+END:VCALENDAR
